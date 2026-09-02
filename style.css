@@ -1,5 +1,5 @@
 /* =========================================
-   Main Website Styles
+   MAIN WEBSITE STYLES
 ========================================= */
 
 
@@ -216,583 +216,97 @@ h3 {
     padding: 100px 7%;
 }
 
-.gallery-page-header {
+
+/* =========================================
+   GALLERY INTRO
+========================================= */
+
+.gallery-intro {
     text-align: center;
 
-    margin-bottom: 50px;
+    max-width: 700px;
+
+    margin: 0 auto 50px;
 }
 
-.gallery-page-header h1 {
+.gallery-intro h1 {
     font-size: clamp(45px, 6vw, 70px);
 
     margin-bottom: 15px;
+
+    color: #493d3d;
 }
 
-.gallery-page-header p {
-    color: #756767;
-
+.gallery-intro .intro-text {
     max-width: 600px;
 
     margin: auto;
-}
 
-
-/* =========================================
-   GALLERY FILTERS
-========================================= */
-
-.gallery-filters {
-    display: flex;
-
-    justify-content: center;
-
-    gap: 10px;
-
-    flex-wrap: wrap;
-
-    margin-bottom: 45px;
-}
-
-.filter {
-    border: 1px solid #decaca;
-
-    background: transparent;
-
-    padding: 9px 18px;
-
-    border-radius: 20px;
-
-    color: #765e63;
-
-    cursor: pointer;
-
-    font-family: Arial, sans-serif;
-
-    transition: 0.3s;
-}
-
-.filter:hover,
-.filter.active {
-    background: #b9828b;
-
-    color: white;
-
-    border-color: #b9828b;
-}
-
-
-/* =========================================
-   PHOTO GALLERY
-========================================= */
-
-.photo-gallery {
-    columns: 3 280px;
-
-    column-gap: 20px;
-}
-
-.photo {
-    margin-bottom: 20px;
-
-    break-inside: avoid;
-
-    position: relative;
-
-    overflow: hidden;
-
-    border-radius: 5px;
-
-    background: #eadbd7;
-}
-
-.photo img {
-    width: 100%;
-
-    display: block;
-
-    transition: transform 0.5s ease;
-}
-
-.photo:hover img {
-    transform: scale(1.04);
-}
-
-
-/* Little heart when hovering */
-
-.photo::after {
-    content: "♡";
-
-    position: absolute;
-
-    bottom: 12px;
-    right: 15px;
-
-    color: white;
-
-    font-size: 22px;
-
-    opacity: 0;
-
-    transition: 0.3s;
-}
-
-.photo:hover::after {
-    opacity: 1;
-}
-
-
-/* =========================================
-   ABOUT SECTION
-========================================= */
-
-.about-section {
-    padding: 120px 10%;
-
-    display: grid;
-
-    grid-template-columns: 0.8fr 1fr;
-
-    gap: 80px;
-
-    align-items: center;
-}
-
-.about-image img {
-    width: 100%;
-
-    max-height: 550px;
-
-    object-fit: cover;
-
-    border-radius: 5px;
-
-   object-position: top center;
-   
-}
-
-.about-text h2 {
-    color: #493d3d;
-
-    margin-bottom: 25px;
-}
-
-.about-text p:not(.small-text) {
     color: #756767;
-
-    margin-bottom: 20px;
 
     font-size: 17px;
 }
 
 
 /* =========================================
-   CONTACT SECTION
+   GALLERY NAVIGATION
 ========================================= */
 
-.contact-section {
-    padding: 120px 20px;
+.gallery-navigation {
+    position: sticky;
 
-    text-align: center;
+    top: 81px;
 
-    background: #f4e7e4;
+    z-index: 90;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    padding: 12px 20px;
+
+    background: rgba(255, 249, 247, 0.96);
+
+    border-bottom: 1px solid #eadbd7;
+
+    backdrop-filter: blur(8px);
 }
 
-.contact-section h2 {
-    margin-bottom: 15px;
-}
+.gallery-nav-button {
+    display: inline-block;
 
-.contact-section > p:not(.small-text) {
-    color: #756767;
+    padding: 8px 17px;
 
-    margin-bottom: 30px;
-}
+    border: 1px solid #decaca;
 
+    border-radius: 20px;
 
-/* =========================================
-   FOOTER
-========================================= */
+    background: #fff9f7;
 
-.site-footer {
-    padding: 30px 7%;
-
-    background: #493d3d;
-
-    color: #f9eeee;
+    color: #765e63;
 
     font-family: Arial, sans-serif;
 
     font-size: 12px;
 
-    display: flex;
-
-    justify-content: space-between;
-}
-
-
-/* =========================================
-   PAGE DECORATIONS
-========================================= */
-
-.decorative-heart {
-    color: #c78391;
-
-    font-size: 25px;
-}
-
-.divider {
-    width: 60px;
-
-    height: 1px;
-
-    background: #d9b9b9;
-
-    margin: 20px auto;
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 750px) {
-
-    /* Header */
-
-    .site-header {
-        flex-direction: column;
-
-        gap: 15px;
-
-        padding: 20px 5%;
-    }
-
-    .navigation {
-        gap: 15px;
-
-        font-size: 12px;
-    }
-
-
-    /* Hero */
-
-    .hero {
-        grid-template-columns: 1fr;
-
-        padding: 60px 8%;
-
-        gap: 50px;
-    }
-
-    .hero h1 {
-        font-size: 50px;
-    }
-
-    .hero-image img {
-        box-shadow: 10px 10px 0 #ead6d3;
-    }
-
-
-    /* Gallery */
-
-    .gallery-page {
-        padding: 70px 5%;
-    }
-
-    .photo-gallery {
-        columns: 2 180px;
-
-        column-gap: 12px;
-    }
-
-    .photo {
-        margin-bottom: 12px;
-    }
-
-
-    /* About */
-
-    .about-section {
-        grid-template-columns: 1fr;
-
-        padding: 80px 8%;
-
-        gap: 40px;
-    }
-
-
-    /* Headings */
-
-    .section-heading h2,
-    .about-text h2,
-    .contact-section h2 {
-        font-size: 36px;
-    }
-
-
-    /* Footer */
-
-    .site-footer {
-        flex-direction: column;
-
-        gap: 8px;
-
-        text-align: center;
-    }
-}
-
-
-/* =========================================
-   VERY SMALL PHONES
-========================================= */
-
-@media (max-width: 450px) {
-
-    .hero h1 {
-        font-size: 42px;
-    }
-
-    .photo-gallery {
-        columns: 1;
-    }
-
-    .navigation {
-        flex-wrap: wrap;
-
-        justify-content: center;
-    }
-}
-
-/* =========================================
-   SOCIAL MEDIA SECTION
-========================================= */
-
-.social-intro {
-    max-width: 550px;
-    margin: 0 auto;
-    color: #756767;
-    font-size: 16px;
-}
-
-
-/* Decorative Divider */
-
-.contact-section .divider {
-    position: relative;
-
-    color: #b9828b;
-
-    background: none;
-
-    width: 100%;
-    height: auto;
-
-    margin: 30px auto;
-}
-
-.contact-section .divider::before {
-    content: "────────  ♡  ────────";
-
-    color: #d9b9b9;
-
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 14px;
-}
-
-
-/* Social Cards Container */
-
-.social-cards {
-    max-width: 700px;
-
-    margin: 40px auto 0;
-
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 15px;
-
-    text-align: left;
-}
-
-
-/* Individual Card */
-
-.social-card {
-    position: relative;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 15px;
-
-    padding: 20px;
-
-    background: #fff9f7;
-
-    border: 1px solid #decaca;
-
-    border-radius: 8px;
-
     transition: 0.3s ease;
-
-    overflow: hidden;
 }
 
-
-/* Decorative corner */
-
-.social-card::before {
-    content: "♡";
-
-    position: absolute;
-
-    top: -8px;
-    right: 10px;
-
-    color: #ead6d3;
-
-    font-size: 35px;
-
-    transition: 0.3s;
-}
-
-
-/* Icon */
-
-.social-icon {
-    width: 45px;
-    height: 45px;
-
-    flex-shrink: 0;
-
-    display: flex;
-
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background: #f4e7e4;
-
-    color: #b9828b;
-
-    font-size: 20px;
-
-    transition: 0.3s;
-}
-
-
-/* Text */
-
-.social-card-text {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 3px;
-
-    min-width: 0;
-}
-
-.social-name {
-    color: #493d3d;
-
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 18px;
-}
-
-.social-description {
-    color: #8a7777;
-
-    font-family: Arial, sans-serif;
-
-    font-size: 11px;
-
-    line-height: 1.4;
-}
-
-
-/* Arrow */
-
-.social-arrow {
-    margin-left: auto;
-
-    color: #b9828b;
-
-    font-size: 20px;
-
-    transition: 0.3s;
-}
-
-
-/* Hover */
-
-.social-card:hover {
-    transform: translateY(-5px);
-
-    background: #fff;
-
-    border-color: #c78391;
-
-    box-shadow: 8px 8px 0 #ead6d3;
-}
-
-.social-card:hover .social-icon {
+.gallery-nav-button:hover {
     background: #b9828b;
+
+    border-color: #b9828b;
 
     color: white;
 
-    transform: rotate(-8deg);
+    transform: translateY(-2px);
 }
 
-.social-card:hover .social-arrow {
-    transform: translateX(5px);
-}
-
-.social-card:hover::before {
-    color: #decaca;
-
-    transform: rotate(10deg);
-}
-
-
-/* Bottom Text */
-
-.social-footer-text {
-    margin-top: 40px;
-
-    color: #b27680;
-
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-style: italic;
-
-    font-size: 15px;
-}
-
-
-/* =========================================
-   SOCIAL MEDIA MOBILE
-========================================= */
-
-@media (max-width: 750px) {
-
-    .social-cards {
-        grid-template-columns: 1fr;
-
-        max-width: 500px;
-
-        gap: 12px;
-    }
-
-    .social-card {
-        padding: 18px;
-    }
-}
 
 /* =========================================
    GALLERY CATEGORIES
@@ -844,9 +358,12 @@ h3 {
 
 .scrapbook {
     width: 100%;
+
     max-width: 1050px;
 
     margin: 0 auto;
+
+    padding: 25px;
 
     display: flex;
 
@@ -856,9 +373,7 @@ h3 {
 
     align-items: flex-start;
 
-    gap: 45px 35px;
-
-    padding: 20px;
+    gap: 50px 35px;
 }
 
 
@@ -869,14 +384,18 @@ h3 {
 .scrapbook-photo {
     position: relative;
 
+    display: block;
+
     width: 220px;
 
-    padding: 12px 12px 15px;
+    padding: 12px 12px 12px;
 
-    background: #fff;
+    background: #ffffff;
 
     box-shadow:
         3px 5px 12px rgba(80, 55, 55, 0.12);
+
+    cursor: zoom-in;
 
     transition:
         transform 0.3s ease,
@@ -884,7 +403,10 @@ h3 {
 }
 
 
-/* Different positions make it feel handmade */
+/*
+   Each photo has a slightly different
+   handmade scrapbook angle.
+*/
 
 .scrapbook-photo.photo-one {
     transform: rotate(-4deg);
@@ -911,7 +433,9 @@ h3 {
 }
 
 
-/* Hover */
+/* =========================================
+   SCRAPBOOK HOVER
+========================================= */
 
 .scrapbook-photo:hover {
     transform: rotate(0deg) translateY(-8px);
@@ -927,59 +451,56 @@ h3 {
    PHOTO FRAME
 ========================================= */
 
+/*
+   IMPORTANT:
+   There is NO fixed height and NO aspect-ratio.
+
+   This allows every photograph to determine
+   its own height naturally.
+*/
+
 .photo-frame {
     width: 100%;
+
     height: auto;
 
-    background: #f4e7e4;
-
     display: block;
+
+    background: #f4e7e4;
 
     overflow: visible;
 }
 
 
-/*
-   Keep the ORIGINAL aspect ratio.
-
-   Do NOT give the image a fixed height.
-   This allows tall, wide, and square photos
-   to all display completely.
-*/
+/* =========================================
+   PHOTO
+========================================= */
 
 .photo-frame img {
     display: block;
 
     width: 100%;
+
     height: auto;
 
     max-width: 100%;
 
-    object-fit: initial;
+    /*
+       Never crop the image.
+    */
+
+    object-fit: contain;
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
 }
 
 
-/* =========================================
-   PHOTO CAPTION
-========================================= */
+/* Slight fade when hovering */
 
-.photo-caption {
-    display: block;
-
-    padding-top: 10px;
-
-    text-align: center;
-
-    color: #756767;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 13px;
-
-    font-style: italic;
+.scrapbook-photo:hover .photo-frame img {
+    opacity: 0.88;
 }
 
 
@@ -1000,15 +521,17 @@ h3 {
 
     height: 20px;
 
-    transform: translateX(-50%) rotate(-2deg);
-
     background: rgba(224, 191, 190, 0.65);
 
-    z-index: 2;
+    transform:
+        translateX(-50%)
+        rotate(-2deg);
+
+    z-index: 3;
 }
 
 
-/* Slightly different tape positions */
+/* Different tape angles */
 
 .scrapbook-photo.photo-two::before {
     transform:
@@ -1030,73 +553,145 @@ h3 {
 
 
 /* =========================================
-   GALLERY INTRO
+   PHOTO LIGHTBOX
 ========================================= */
 
-.gallery-intro {
-    text-align: center;
+/*
+   CSS-only image viewer.
 
-    max-width: 700px;
+   Clicking a scrapbook photo changes the
+   URL hash and activates the matching
+   lightbox using :target.
 
-    margin: 0 auto 50px;
+   No JavaScript required.
+*/
+
+.photo-lightbox {
+    position: fixed !important;
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    z-index: 9999;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    background: rgba(73, 61, 61, 0.88);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
 }
 
-.gallery-intro h1 {
-    font-size: clamp(45px, 6vw, 70px);
 
-    margin-bottom: 15px;
+/*
+   Only the lightbox whose ID matches
+   the URL hash becomes visible.
+*/
 
-    color: #493d3d;
-}
+.photo-lightbox:target {
+    opacity: 1;
 
-.gallery-intro .intro-text {
-    max-width: 600px;
+    visibility: visible;
 
-    margin: auto;
-
-    color: #756767;
-
-    font-size: 17px;
+    pointer-events: auto;
 }
 
 
 /* =========================================
-   GALLERY NAVIGATION
+   LIGHTBOX BACKGROUND
 ========================================= */
 
-.gallery-navigation {
-    position: sticky;
+.lightbox-background {
+    position: absolute;
 
-    top: 81px;
+    top: 0;
+    left: 0;
 
-    z-index: 90;
+    width: 100%;
+    height: 100%;
 
-    display: flex;
-
-    justify-content: center;
-
-    align-items: center;
-
-    gap: 10px;
-
-    flex-wrap: wrap;
-
-    padding: 12px 20px;
-
-    background: rgba(255, 249, 247, 0.96);
-
-    border-bottom: 1px solid #eadbd7;
-
-    backdrop-filter: blur(8px);
+    cursor: zoom-out;
 }
 
 
-.gallery-nav-button {
-    padding: 8px 17px;
+/* =========================================
+   LIGHTBOX CONTENT
+========================================= */
 
-    border: 1px solid #decaca;
+.lightbox-content {
+    position: relative;
 
-    border-radius: 20px;
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: auto;
+    height: auto;
+
+    max-width: 92vw;
+    max-height: 92vh;
+}
+
+
+/* =========================================
+   LIGHTBOX IMAGE
+========================================= */
+
+.lightbox-content img {
+    display: block;
+
+    width: auto;
+    height: auto;
+
+    max-width: 88vw;
+    max-height: 88vh;
+
+    object-fit: contain;
+
+    border: 8px solid white;
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================
+   LIGHTBOX CLOSE BUTTON
+========================================= */
+
+.lightbox-close {
+    position: absolute;
+
+    top: -20px;
+    right: -20px;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
 
     background: #fff9f7;
 
@@ -1104,28 +699,430 @@ h3 {
 
     font-family: Arial, sans-serif;
 
-    font-size: 12px;
+    font-size: 28px;
+
+    line-height: 1;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.25);
 
     transition: 0.3s ease;
 }
 
-
-.gallery-nav-button:hover {
+.lightbox-close:hover {
     background: #b9828b;
-
-    border-color: #b9828b;
 
     color: white;
 
-    transform: translateY(-2px);
+    transform: rotate(90deg);
 }
 
 
 /* =========================================
-   GALLERY MOBILE
+   ABOUT SECTION
+========================================= */
+
+.about-section {
+    padding: 120px 10%;
+
+    display: grid;
+
+    grid-template-columns: 0.8fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+
+    max-height: 550px;
+
+    object-fit: cover;
+
+    border-radius: 5px;
+
+    object-position: top center;
+}
+
+.about-text h2 {
+    color: #493d3d;
+
+    margin-bottom: 25px;
+}
+
+.about-text p:not(.small-text) {
+    color: #756767;
+
+    margin-bottom: 20px;
+
+    font-size: 17px;
+}
+
+
+/* =========================================
+   CONTACT SECTION
+========================================= */
+
+.contact-section {
+    padding: 120px 20px;
+
+    text-align: center;
+
+    background: #f4e7e4;
+}
+
+.contact-section h2 {
+    margin-bottom: 15px;
+}
+
+.contact-section > p:not(.small-text) {
+    color: #756767;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   SOCIAL MEDIA SECTION
+========================================= */
+
+.social-intro {
+    max-width: 550px;
+
+    margin: 0 auto;
+
+    color: #756767;
+
+    font-size: 16px;
+}
+
+
+/* =========================================
+   SOCIAL DIVIDER
+========================================= */
+
+.contact-section .divider {
+    position: relative;
+
+    color: #b9828b;
+
+    background: none;
+
+    width: 100%;
+    height: auto;
+
+    margin: 30px auto;
+}
+
+.contact-section .divider::before {
+    content: "────────  ♡  ────────";
+
+    color: #d9b9b9;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   SOCIAL CARDS
+========================================= */
+
+.social-cards {
+    max-width: 700px;
+
+    margin: 40px auto 0;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    text-align: left;
+}
+
+
+/* =========================================
+   SOCIAL CARD
+========================================= */
+
+.social-card {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 20px;
+
+    background: #fff9f7;
+
+    border: 1px solid #decaca;
+
+    border-radius: 8px;
+
+    transition: 0.3s ease;
+
+    overflow: hidden;
+}
+
+
+/* Decorative corner */
+
+.social-card::before {
+    content: "♡";
+
+    position: absolute;
+
+    top: -8px;
+    right: 10px;
+
+    color: #ead6d3;
+
+    font-size: 35px;
+
+    transition: 0.3s;
+}
+
+
+/* =========================================
+   SOCIAL ICON
+========================================= */
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f4e7e4;
+
+    color: #b9828b;
+
+    font-size: 20px;
+
+    transition: 0.3s;
+}
+
+
+/* =========================================
+   SOCIAL TEXT
+========================================= */
+
+.social-card-text {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+    min-width: 0;
+}
+
+.social-name {
+    color: #493d3d;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 18px;
+}
+
+.social-description {
+    color: #8a7777;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================
+   SOCIAL ARROW
+========================================= */
+
+.social-arrow {
+    margin-left: auto;
+
+    color: #b9828b;
+
+    font-size: 20px;
+
+    transition: 0.3s;
+}
+
+
+/* =========================================
+   SOCIAL CARD HOVER
+========================================= */
+
+.social-card:hover {
+    transform: translateY(-5px);
+
+    background: #fff;
+
+    border-color: #c78391;
+
+    box-shadow:
+        8px 8px 0 #ead6d3;
+}
+
+.social-card:hover .social-icon {
+    background: #b9828b;
+
+    color: white;
+
+    transform: rotate(-8deg);
+}
+
+.social-card:hover .social-arrow {
+    transform: translateX(5px);
+}
+
+.social-card:hover::before {
+    color: #decaca;
+
+    transform: rotate(10deg);
+}
+
+
+/* =========================================
+   SOCIAL FOOTER TEXT
+========================================= */
+
+.social-footer-text {
+    margin-top: 40px;
+
+    color: #b27680;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-style: italic;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+    padding: 30px 7%;
+
+    background: #493d3d;
+
+    color: #f9eeee;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    display: flex;
+
+    justify-content: space-between;
+}
+
+
+/* =========================================
+   PAGE DECORATIONS
+========================================= */
+
+.decorative-heart {
+    color: #c78391;
+
+    font-size: 25px;
+}
+
+.divider {
+    width: 60px;
+
+    height: 1px;
+
+    background: #d9b9b9;
+
+    margin: 20px auto;
+}
+
+
+/* =========================================
+   TABLET / MOBILE
 ========================================= */
 
 @media (max-width: 750px) {
+
+    /* -------------------------------------
+       HEADER
+    ------------------------------------- */
+
+    .site-header {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 20px 5%;
+    }
+
+    .navigation {
+        gap: 15px;
+
+        font-size: 12px;
+    }
+
+
+    /* -------------------------------------
+       HERO
+    ------------------------------------- */
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        padding: 60px 8%;
+
+        gap: 50px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .hero-image img {
+        box-shadow:
+            10px 10px 0 #ead6d3;
+    }
+
+
+    /* -------------------------------------
+       GALLERY
+    ------------------------------------- */
+
+    .gallery-page {
+        padding: 70px 5%;
+    }
+
 
     .gallery-navigation {
         top: 105px;
@@ -1162,8 +1159,12 @@ h3 {
     }
 
 
+    /* -------------------------------------
+       SCRAPBOOK
+    ------------------------------------- */
+
     .scrapbook {
-        gap: 35px 20px;
+        gap: 40px 20px;
 
         padding: 15px;
     }
@@ -1193,18 +1194,127 @@ h3 {
         margin-top: 25px;
     }
 
+
+    /* -------------------------------------
+       ABOUT
+    ------------------------------------- */
+
+    .about-section {
+        grid-template-columns: 1fr;
+
+        padding: 80px 8%;
+
+        gap: 40px;
+    }
+
+
+    /* -------------------------------------
+       HEADINGS
+    ------------------------------------- */
+
+    .section-heading h2,
+    .about-text h2,
+    .contact-section h2 {
+        font-size: 36px;
+    }
+
+
+    /* -------------------------------------
+       SOCIAL CARDS
+    ------------------------------------- */
+
+    .social-cards {
+        grid-template-columns: 1fr;
+
+        max-width: 500px;
+
+        gap: 12px;
+    }
+
+
+    .social-card {
+        padding: 18px;
+    }
+
+
+    /* -------------------------------------
+       LIGHTBOX
+    ------------------------------------- */
+
+    .photo-lightbox {
+        padding: 20px;
+    }
+
+
+    .lightbox-content {
+        max-width: 94vw;
+
+        max-height: 90vh;
+    }
+
+
+    .lightbox-content img {
+        max-width: 90vw;
+
+        max-height: 85vh;
+
+        border-width: 5px;
+    }
+
+
+    .lightbox-close {
+        top: -15px;
+        right: -15px;
+
+        width: 36px;
+        height: 36px;
+
+        font-size: 24px;
+    }
+
+
+    /* -------------------------------------
+       FOOTER
+    ------------------------------------- */
+
+    .site-footer {
+        flex-direction: column;
+
+        gap: 8px;
+
+        text-align: center;
+    }
+
 }
 
 
 /* =========================================
-   SMALL PHONES
+   VERY SMALL PHONES
 ========================================= */
 
 @media (max-width: 450px) {
 
-    .gallery-navigation {
-        position: sticky;
+    /* -------------------------------------
+       HERO
+    ------------------------------------- */
 
+    .hero h1 {
+        font-size: 42px;
+    }
+
+
+    /* -------------------------------------
+       NAVIGATION
+    ------------------------------------- */
+
+    .navigation {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+
+    .gallery-navigation {
         top: 100px;
     }
 
@@ -1216,6 +1326,10 @@ h3 {
     }
 
 
+    /* -------------------------------------
+       SCRAPBOOK
+    ------------------------------------- */
+
     .scrapbook {
         gap: 30px 15px;
 
@@ -1226,7 +1340,7 @@ h3 {
     .scrapbook-photo {
         width: calc(50% - 10px);
 
-        padding: 8px 8px 12px;
+        padding: 8px;
     }
 
 
@@ -1238,217 +1352,14 @@ h3 {
     }
 
 
-    .photo-caption {
-        font-size: 11px;
-    }
-
-}
-
-/* =========================================
-   CLICKABLE PHOTO LIGHTBOX
-========================================= */
-
-.photo-lightbox {
-    position: fixed;
-
-    inset: 0;
-
-    z-index: 1000;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    padding: 40px;
-
-    background: rgba(73, 61, 61, 0.88);
-
-    opacity: 0;
-
-    visibility: hidden;
-
-    pointer-events: none;
-
-    transition:
-        opacity 0.3s ease,
-        visibility 0.3s ease;
-}
-
-
-/* Show the lightbox when its URL hash is active */
-
-.photo-lightbox:target {
-    opacity: 1;
-
-    visibility: visible;
-
-    pointer-events: auto;
-}
-
-
-/* =========================================
-   DARK BACKGROUND
-========================================= */
-
-.lightbox-background {
-    position: absolute;
-
-    inset: 0;
-
-    cursor: zoom-out;
-}
-
-
-/* =========================================
-   LARGE PHOTO
-========================================= */
-
-.lightbox-content {
-    position: relative;
-
-    z-index: 2;
-
-    max-width: 90vw;
-
-    max-height: 90vh;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-}
-
-
-.lightbox-content img {
-    display: block;
-
-    max-width: 90vw;
-
-    max-height: 88vh;
-
-    width: auto;
-
-    height: auto;
-
-    object-fit: contain;
-
-    box-shadow:
-        0 10px 40px rgba(0, 0, 0, 0.35);
-
-    border: 8px solid white;
-}
-
-
-/* =========================================
-   CLOSE BUTTON
-========================================= */
-
-.lightbox-close {
-    position: absolute;
-
-    top: -20px;
-
-    right: -20px;
-
-    width: 40px;
-
-    height: 40px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background: #fff9f7;
-
-    color: #765e63;
-
-    font-family: Arial, sans-serif;
-
-    font-size: 28px;
-
-    line-height: 1;
-
-    box-shadow:
-        0 3px 10px rgba(0, 0, 0, 0.2);
-
-    transition: 0.3s ease;
-}
-
-
-.lightbox-close:hover {
-    background: #b9828b;
-
-    color: white;
-
-    transform: rotate(90deg);
-}
-
-
-/* =========================================
-   CLICKABLE SCRAPBOOK PHOTOS
-========================================= */
-
-.scrapbook-photo {
-    cursor: zoom-in;
-}
-
-
-.scrapbook-photo img {
-    transition:
-        opacity 0.3s ease,
-        transform 0.3s ease;
-}
-
-
-.scrapbook-photo:hover img {
-    opacity: 0.88;
-}
-
-
-/* =========================================
-   LIGHTBOX MOBILE
-========================================= */
-
-@media (max-width: 750px) {
-
-    .photo-lightbox {
-        padding: 20px;
-    }
-
-
-    .lightbox-content {
-        max-width: 95vw;
-
-        max-height: 90vh;
-    }
-
+    /* -------------------------------------
+       LIGHTBOX
+    ------------------------------------- */
 
     .lightbox-content img {
-        max-width: 92vw;
+        max-width: 88vw;
 
-        max-height: 85vh;
-
-        border-width: 5px;
-    }
-
-
-    .lightbox-close {
-        top: -15px;
-
-        right: -15px;
-
-        width: 35px;
-
-        height: 35px;
-
-        font-size: 24px;
+        max-height: 82vh;
     }
 
 }
