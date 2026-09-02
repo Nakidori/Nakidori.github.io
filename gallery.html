@@ -5,11 +5,13 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <title>Gallery ♡ Naki Photography</title>
+    <title>Gallery ♡ Photography</title>
 
-    <!-- Connects this page to the shared CSS -->
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -26,21 +28,16 @@
 
         <div class="logo">
             <a href="index.html">
-                NAKI ♡
+                NAKIDORI ♡
             </a>
         </div>
 
 
         <nav class="navigation">
 
-            <!-- Link back to welcome page -->
-
             <a href="index.html">
                 Home
             </a>
-
-
-            <!-- Current page -->
 
             <a href="gallery.html">
                 Gallery
@@ -53,232 +50,174 @@
 
 
     <!-- =====================================
-         PHOTO GALLERY
+         GALLERY
     ====================================== -->
 
-    <main>
+    <main class="gallery-page">
 
 
-        <section class="gallery-page">
+        <!-- Page Introduction -->
 
+        <header class="gallery-page-header">
 
-            <!-- Gallery Introduction -->
+            <p class="small-text">
+                MY PHOTOGRAPHY ♡
+            </p>
 
-            <div class="gallery-page-header">
+            <h1>
+                The Gallery
+            </h1>
 
-                <p class="small-text">
-                    MY PHOTOGRAPHY ♡
-                </p>
+            <p>
+                A collection of moments, places, creatures,
+                and little details that caught my eye.
+            </p>
 
-
-                <h1>
-                    The Gallery
-                </h1>
-
-
-                <div class="divider"></div>
-
-
-                <p>
-                    A collection of photographs, memories,
-                    and little moments I've captured.
-                </p>
-
-            </div>
+        </header>
 
 
 
-            <!-- =================================
-                 CATEGORY BUTTONS
-            ================================== -->
+        <!-- =====================================
+             PORTRAIT / ANIMALS
+        ====================================== -->
 
-            <div class="gallery-filters">
+        <section class="gallery-category">
 
-                <button class="filter active">
-                    All
-                </button>
+            <div class="category-header">
 
-                <button class="filter">
-                    Portraits
-                </button>
+                <div>
 
-                <button class="filter">
-                    Nature
-                </button>
+                    <p class="small-text">
+                        COLLECTION I
+                    </p>
 
-                <button class="filter">
-                    Cosplay
-                </button>
+                    <h2>
+                        Portrait
+                    </h2>
 
-                <button class="filter">
-                    Other
-                </button>
+                    <p>
+                        Animals, personalities, and little
+                        expressions captured in a moment.
+                    </p>
+
+                </div>
 
             </div>
 
 
 
-            <!-- =================================
-                 PHOTO GRID
-            ================================== -->
+            <!-- Carousel -->
 
-            <div class="photo-gallery">
+            <div class="photo-carousel">
+
+                <button
+                    class="carousel-button previous"
+                    onclick="changeSlide('portrait', -1)"
+                    aria-label="Previous portrait photo"
+                >
+                    ←
+                </button>
 
 
-                <!-- PHOTO 1 -->
+                <div class="carousel-window">
 
-                <figure class="photo">
-
-                    <img
-                        src="photos/photo1.jpg"
-                        alt="Photography 1"
+                    <div
+                        class="carousel-track"
+                        id="portrait-carousel"
                     >
 
-                </figure>
+                        <img
+                            src="Images/portrait1.jpg"
+                            alt="Animal portrait"
+                            class="carousel-image active"
+                        >
 
+                        <img
+                            src="Images/portrait2.jpg"
+                            alt="Animal portrait"
+                            class="carousel-image"
+                        >
 
+                        <img
+                            src="Images/portrait3.jpg"
+                            alt="Animal portrait"
+                            class="carousel-image"
+                        >
 
-                <!-- PHOTO 2 -->
+                        <img
+                            src="Images/portrait4.jpg"
+                            alt="Animal portrait"
+                            class="carousel-image"
+                        >
 
-                <figure class="photo">
+                    </div>
 
-                    <img
-                        src="photos/photo2.jpg"
-                        alt="Photography 2"
-                    >
+                </div>
 
-                </figure>
 
+                <button
+                    class="carousel-button next"
+                    onclick="changeSlide('portrait', 1)"
+                    aria-label="Next portrait photo"
+                >
+                    →
+                </button>
 
+            </div>
 
-                <!-- PHOTO 3 -->
 
-                <figure class="photo">
 
-                    <img
-                        src="photos/photo3.jpg"
-                        alt="Photography 3"
-                    >
+            <!-- Carousel Controls -->
 
-                </figure>
+            <div class="carousel-controls">
 
+                <div
+                    class="carousel-dots"
+                    id="portrait-dots"
+                >
+                </div>
 
+            </div>
 
-                <!-- PHOTO 4 -->
 
-                <figure class="photo">
 
-                    <img
-                        src="photos/photo4.jpg"
-                        alt="Photography 4"
-                    >
+            <!-- Expand Button -->
 
-                </figure>
+            <button
+                class="view-all-button"
+                onclick="toggleGallery('portrait')"
+            >
+                View All Portrait Photos ♡
+            </button>
 
 
 
-                <!-- PHOTO 5 -->
+            <!-- Full Grid -->
 
-                <figure class="photo">
+            <div
+                class="expanded-gallery"
+                id="portrait-gallery"
+            >
 
-                    <img
-                        src="photos/photo5.jpg"
-                        alt="Photography 5"
-                    >
+                <img
+                    src="Images/portrait1.jpg"
+                    alt="Animal portrait"
+                >
 
-                </figure>
+                <img
+                    src="Images/portrait2.jpg"
+                    alt="Animal portrait"
+                >
 
+                <img
+                    src="Images/portrait3.jpg"
+                    alt="Animal portrait"
+                >
 
-
-                <!-- PHOTO 6 -->
-
-                <figure class="photo">
-
-                    <img
-                        src="photos/photo6.jpg"
-                        alt="Photography 6"
-                    >
-
-                </figure>
-
-
-
-                <!-- PHOTO 7 -->
-
-                <figure class="photo">
-
-                    <img
-                        src="photos/photo7.jpg"
-                        alt="Photography 7"
-                    >
-
-                </figure>
-
-
-
-                <!-- PHOTO 8 -->
-
-                <figure class="photo">
-
-                    <img
-                        src="photos/photo8.jpg"
-                        alt="Photography 8"
-                    >
-
-                </figure>
-
-
-
-                <!-- PHOTO 9 -->
-
-                <figure class="photo">
-
-                    <img
-                        src="photos/photo9.jpg"
-                        alt="Photography 9"
-                    >
-
-                </figure>
-
-
-
-                <!-- PHOTO 10 -->
-
-                <figure class="photo">
-
-                    <img
-                        src="photos/photo10.jpg"
-                        alt="Photography 10"
-                    >
-
-                </figure>
-
-
-
-                <!-- PHOTO 11 -->
-
-                <figure class="photo">
-
-                    <img
-                        src="photos/photo11.jpg"
-                        alt="Photography 11"
-                    >
-
-                </figure>
-
-
-
-                <!-- PHOTO 12 -->
-
-                <figure class="photo">
-
-                    <img
-                        src="photos/photo12.jpg"
-                        alt="Photography 12"
-                    >
-
-                </figure>
-
+                <img
+                    src="Images/portrait4.jpg"
+                    alt="Animal portrait"
+                >
 
             </div>
 
@@ -287,32 +226,296 @@
 
 
         <!-- =====================================
-             RETURN HOME
+             LANDSCAPE
         ====================================== -->
 
-        <section class="contact-section">
+        <section class="gallery-category">
 
-            <p class="small-text">
-                THANK YOU FOR LOOKING ♡
-            </p>
+            <div class="category-header">
+
+                <div>
+
+                    <p class="small-text">
+                        COLLECTION II
+                    </p>
+
+                    <h2>
+                        Landscape
+                    </h2>
+
+                    <p>
+                        Places, skies, scenery, and quiet moments
+                        found out in the world.
+                    </p>
+
+                </div>
+
+            </div>
 
 
-            <h2>
-                Back to the beginning?
-            </h2>
+
+            <!-- Carousel -->
+
+            <div class="photo-carousel">
+
+                <button
+                    class="carousel-button previous"
+                    onclick="changeSlide('landscape', -1)"
+                    aria-label="Previous landscape photo"
+                >
+                    ←
+                </button>
 
 
-            <p>
-                Return to the welcome page.
-            </p>
+                <div class="carousel-window">
+
+                    <div
+                        class="carousel-track"
+                        id="landscape-carousel"
+                    >
+
+                        <img
+                            src="Images/landscape1.jpg"
+                            alt="Landscape photograph"
+                            class="carousel-image active"
+                        >
+
+                        <img
+                            src="Images/landscape2.jpg"
+                            alt="Landscape photograph"
+                            class="carousel-image"
+                        >
+
+                        <img
+                            src="Images/landscape3.jpg"
+                            alt="Landscape photograph"
+                            class="carousel-image"
+                        >
+
+                        <img
+                            src="Images/landscape4.jpg"
+                            alt="Landscape photograph"
+                            class="carousel-image"
+                        >
+
+                    </div>
+
+                </div>
 
 
-            <a
-                href="index.html"
-                class="contact-button"
+                <button
+                    class="carousel-button next"
+                    onclick="changeSlide('landscape', 1)"
+                    aria-label="Next landscape photo"
+                >
+                    →
+                </button>
+
+            </div>
+
+
+
+            <!-- Carousel Controls -->
+
+            <div class="carousel-controls">
+
+                <div
+                    class="carousel-dots"
+                    id="landscape-dots"
+                >
+                </div>
+
+            </div>
+
+
+
+            <!-- Expand Button -->
+
+            <button
+                class="view-all-button"
+                onclick="toggleGallery('landscape')"
             >
-                ← Back Home
-            </a>
+                View All Landscape Photos ♡
+            </button>
+
+
+
+            <!-- Full Grid -->
+
+            <div
+                class="expanded-gallery"
+                id="landscape-gallery"
+            >
+
+                <img
+                    src="Images/landscape1.jpg"
+                    alt="Landscape photograph"
+                >
+
+                <img
+                    src="Images/landscape2.jpg"
+                    alt="Landscape photograph"
+                >
+
+                <img
+                    src="Images/landscape3.jpg"
+                    alt="Landscape photograph"
+                >
+
+                <img
+                    src="Images/landscape4.jpg"
+                    alt="Landscape photograph"
+                >
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             STILL LIFE
+        ====================================== -->
+
+        <section class="gallery-category">
+
+            <div class="category-header">
+
+                <div>
+
+                    <p class="small-text">
+                        COLLECTION III
+                    </p>
+
+                    <h2>
+                        Still Life
+                    </h2>
+
+                    <p>
+                        Small details, objects, textures, and
+                        everyday things worth remembering.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Carousel -->
+
+            <div class="photo-carousel">
+
+                <button
+                    class="carousel-button previous"
+                    onclick="changeSlide('stilllife', -1)"
+                    aria-label="Previous still life photo"
+                >
+                    ←
+                </button>
+
+
+                <div class="carousel-window">
+
+                    <div
+                        class="carousel-track"
+                        id="stilllife-carousel"
+                    >
+
+                        <img
+                            src="Images/stilllife1.jpg"
+                            alt="Still life photograph"
+                            class="carousel-image active"
+                        >
+
+                        <img
+                            src="Images/stilllife2.jpg"
+                            alt="Still life photograph"
+                            class="carousel-image"
+                        >
+
+                        <img
+                            src="Images/stilllife3.jpg"
+                            alt="Still life photograph"
+                            class="carousel-image"
+                        >
+
+                        <img
+                            src="Images/stilllife4.jpg"
+                            alt="Still life photograph"
+                            class="carousel-image"
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    class="carousel-button next"
+                    onclick="changeSlide('stilllife', 1)"
+                    aria-label="Next still life photo"
+                >
+                    →
+                </button>
+
+            </div>
+
+
+
+            <!-- Carousel Controls -->
+
+            <div class="carousel-controls">
+
+                <div
+                    class="carousel-dots"
+                    id="stilllife-dots"
+                >
+                </div>
+
+            </div>
+
+
+
+            <!-- Expand Button -->
+
+            <button
+                class="view-all-button"
+                onclick="toggleGallery('stilllife')"
+            >
+                View All Still Life Photos ♡
+            </button>
+
+
+
+            <!-- Full Grid -->
+
+            <div
+                class="expanded-gallery"
+                id="stilllife-gallery"
+            >
+
+                <img
+                    src="Images/stilllife1.jpg"
+                    alt="Still life photograph"
+                >
+
+                <img
+                    src="Images/stilllife2.jpg"
+                    alt="Still life photograph"
+                >
+
+                <img
+                    src="Images/stilllife3.jpg"
+                    alt="Still life photograph"
+                >
+
+                <img
+                    src="Images/stilllife4.jpg"
+                    alt="Still life photograph"
+                >
+
+            </div>
 
         </section>
 
@@ -331,7 +534,6 @@
             Made with ♡ by Naki
         </p>
 
-
         <p>
             ©nakidori._.cosplays
         </p>
@@ -339,7 +541,10 @@
     </footer>
 
 
-</body>
 
+    <!-- Gallery JavaScript -->
+
+    <script src="gallery.js"></script>
+
+</body>
 </html>
-```
