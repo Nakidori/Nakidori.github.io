@@ -1,609 +1,384 @@
+```html
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-```
-<meta charset="UTF-8">
+    <title>Gallery ♡ Photography</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Gallery ♡ Photography</title>
-
-<link rel="stylesheet" href="style.css">
-```
-
+    <link rel="stylesheet" href="style.css">
 </head>
+
 
 <body>
 
-```
-<!-- =====================================
-     HEADER / NAVIGATION
-====================================== -->
+    <!-- ================================
+         HEADER
+    ================================= -->
 
-<header class="site-header">
+    <header class="site-header">
 
-    <div class="logo">
-        <a href="index.html">
-            PHOTOGRAPHY ♡
-        </a>
-    </div>
+        <div class="logo">
+            <a href="index.html">PHOTOGRAPHY ♡</a>
+        </div>
 
-
-    <nav class="navigation">
-
-        <a href="index.html">
-            Home
-        </a>
-
-        <a href="gallery.html">
-            Gallery
-        </a>
-
-    </nav>
-
-</header>
-
-
-
-<!-- =====================================
-     GALLERY PAGE
-====================================== -->
-
-<main class="gallery-page">
-
-
-    <!-- PAGE INTRODUCTION -->
-
-    <header class="gallery-page-header">
-
-        <p class="small-text">
-            MY PHOTOGRAPHY ♡
-        </p>
-
-        <h1>
-            The Gallery
-        </h1>
-
-        <div class="divider"></div>
-
-        <p>
-            A collection of little moments, places,
-            creatures, and details that caught my eye.
-        </p>
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="gallery.html" class="active">Gallery</a>
+        </nav>
 
     </header>
 
 
 
-    <!-- =====================================
-         PORTRAIT / ANIMALS
-    ====================================== -->
+    <!-- ================================
+         GALLERY
+    ================================= -->
 
-    <section class="gallery-category">
+    <main class="gallery-page">
 
 
-        <div class="category-header">
+        <!-- PAGE INTRO -->
 
-            <p class="small-text">
-                COLLECTION I
+        <section class="gallery-intro">
+
+            <p class="small-text">♡ MY PHOTOGRAPHY ♡</p>
+
+            <h1>My Gallery</h1>
+
+            <div class="divider">
+                ✦
+            </div>
+
+            <p class="intro-text">
+                A little collection of photographs I've taken —
+                <br>
+                moments, places, creatures, and tiny details
+                that caught my eye.
             </p>
 
-            <h2>
-                Portrait
-            </h2>
-
-            <p>
-                Animals, personalities, and little
-                expressions captured in a moment.
-            </p>
-
-        </div>
+        </section>
 
 
 
-        <!-- CSS CAROUSEL -->
+        <!-- ================================
+             PORTRAIT
+        ================================= -->
 
-        <div class="css-carousel portrait-carousel">
+        <section class="gallery-category">
 
+            <div class="category-header">
 
-            <!-- PHOTO 1 -->
+                <span class="collection-number">
+                    COLLECTION I
+                </span>
 
-            <input
-                type="radio"
-                name="portrait"
-                id="portrait-1"
-                checked
-            >
+                <h2>Portrait</h2>
 
-            <label
-                for="portrait-1"
-                class="carousel-dot"
-            >
-                1
-            </label>
-
-
-            <!-- PHOTO 2 -->
-
-            <input
-                type="radio"
-                name="portrait"
-                id="portrait-2"
-            >
-
-            <label
-                for="portrait-2"
-                class="carousel-dot"
-            >
-                2
-            </label>
-
-
-            <!-- PHOTO 3 -->
-
-            <input
-                type="radio"
-                name="portrait"
-                id="portrait-3"
-            >
-
-            <label
-                for="portrait-3"
-                class="carousel-dot"
-            >
-                3
-            </label>
-
-
-            <!-- PHOTO 4 -->
-
-            <input
-                type="radio"
-                name="portrait"
-                id="portrait-4"
-            >
-
-            <label
-                for="portrait-4"
-                class="carousel-dot"
-            >
-                4
-            </label>
-
-
-
-            <!-- IMAGES -->
-
-            <div class="carousel-images">
-
-
-                <img
-                    src="Images/portrait1.jpg"
-                    alt="Animal portrait"
-                    class="portrait-photo portrait-photo-1"
-                >
-
-                <img
-                    src="Images/portrait2.jpg"
-                    alt="Animal portrait"
-                    class="portrait-photo portrait-photo-2"
-                >
-
-                <img
-                    src="Images/portrait3.jpg"
-                    alt="Animal portrait"
-                    class="portrait-photo portrait-photo-3"
-                >
-
-                <img
-                    src="Images/portrait4.jpg"
-                    alt="Animal portrait"
-                    class="portrait-photo portrait-photo-4"
-                >
+                <p>
+                    Animals, personalities, and little
+                    expressions captured in a moment.
+                </p>
 
             </div>
 
 
-        </div>
+            <!-- PHOTO DISPLAY -->
 
+            <div class="photo-display">
 
+                <div class="photo-card">
+                    <img
+                        src="Images/portrait1.jpg"
+                        alt="Animal portrait"
+                    >
+                </div>
 
-        <!-- VIEW ALL -->
+                <div class="photo-card">
+                    <img
+                        src="Images/portrait2.jpg"
+                        alt="Animal portrait"
+                    >
+                </div>
 
-        <a
-            href="#portrait-grid"
-            class="view-all-button"
-        >
-            View All Portrait Photos ♡
-        </a>
+                <div class="photo-card">
+                    <img
+                        src="Images/portrait3.jpg"
+                        alt="Animal portrait"
+                    >
+                </div>
 
-
-
-        <!-- FULL GRID -->
-
-        <div
-            class="expanded-gallery"
-            id="portrait-grid"
-        >
-
-            <img
-                src="Images/portrait1.jpg"
-                alt="Animal portrait"
-            >
-
-            <img
-                src="Images/portrait2.jpg"
-                alt="Animal portrait"
-            >
-
-            <img
-                src="Images/portrait3.jpg"
-                alt="Animal portrait"
-            >
-
-            <img
-                src="Images/portrait4.jpg"
-                alt="Animal portrait"
-            >
-
-        </div>
-
-
-    </section>
-
-
-
-    <!-- =====================================
-         LANDSCAPE
-    ====================================== -->
-
-    <section class="gallery-category">
-
-
-        <div class="category-header">
-
-            <p class="small-text">
-                COLLECTION II
-            </p>
-
-            <h2>
-                Landscape
-            </h2>
-
-            <p>
-                Places, skies, scenery, and quiet moments
-                found out in the world.
-            </p>
-
-        </div>
-
-
-
-        <!-- CSS CAROUSEL -->
-
-        <div class="css-carousel landscape-carousel">
-
-
-            <input
-                type="radio"
-                name="landscape"
-                id="landscape-1"
-                checked
-            >
-
-            <label
-                for="landscape-1"
-                class="carousel-dot"
-            >
-                1
-            </label>
-
-
-            <input
-                type="radio"
-                name="landscape"
-                id="landscape-2"
-            >
-
-            <label
-                for="landscape-2"
-                class="carousel-dot"
-            >
-                2
-            </label>
-
-
-            <input
-                type="radio"
-                name="landscape"
-                id="landscape-3"
-            >
-
-            <label
-                for="landscape-3"
-                class="carousel-dot"
-            >
-                3
-            </label>
-
-
-            <input
-                type="radio"
-                name="landscape"
-                id="landscape-4"
-            >
-
-            <label
-                for="landscape-4"
-                class="carousel-dot"
-            >
-                4
-            </label>
-
-
-
-            <div class="carousel-images">
-
-
-                <img
-                    src="Images/landscape1.jpg"
-                    alt="Landscape photograph"
-                    class="landscape-photo landscape-photo-1"
-                >
-
-                <img
-                    src="Images/landscape2.jpg"
-                    alt="Landscape photograph"
-                    class="landscape-photo landscape-photo-2"
-                >
-
-                <img
-                    src="Images/landscape3.jpg"
-                    alt="Landscape photograph"
-                    class="landscape-photo landscape-photo-3"
-                >
-
-                <img
-                    src="Images/landscape4.jpg"
-                    alt="Landscape photograph"
-                    class="landscape-photo landscape-photo-4"
-                >
+                <div class="photo-card">
+                    <img
+                        src="Images/portrait4.jpg"
+                        alt="Animal portrait"
+                    >
+                </div>
 
             </div>
 
 
-        </div>
+            <a href="#portrait-grid" class="view-all-button">
+                View All Portrait Photos ♡
+            </a>
+
+
+            <!-- EXPANDED GALLERY -->
+
+            <div class="expanded-gallery" id="portrait-grid">
+
+                <div class="gallery-photo">
+                    <img
+                        src="Images/portrait1.jpg"
+                        alt="Animal portrait"
+                    >
+                </div>
+
+                <div class="gallery-photo">
+                    <img
+                        src="Images/portrait2.jpg"
+                        alt="Animal portrait"
+                    >
+                </div>
+
+                <div class="gallery-photo">
+                    <img
+                        src="Images/portrait3.jpg"
+                        alt="Animal portrait"
+                    >
+                </div>
+
+                <div class="gallery-photo">
+                    <img
+                        src="Images/portrait4.jpg"
+                        alt="Animal portrait"
+                    >
+                </div>
+
+            </div>
+
+        </section>
 
 
 
-        <a
-            href="#landscape-grid"
-            class="view-all-button"
-        >
-            View All Landscape Photos ♡
-        </a>
+        <!-- ================================
+             LANDSCAPE
+        ================================= -->
 
+        <section class="gallery-category">
 
+            <div class="category-header">
 
-        <div
-            class="expanded-gallery"
-            id="landscape-grid"
-        >
+                <span class="collection-number">
+                    COLLECTION II
+                </span>
 
-            <img
-                src="Images/landscape1.jpg"
-                alt="Landscape photograph"
-            >
+                <h2>Landscape</h2>
 
-            <img
-                src="Images/landscape2.jpg"
-                alt="Landscape photograph"
-            >
-
-            <img
-                src="Images/landscape3.jpg"
-                alt="Landscape photograph"
-            >
-
-            <img
-                src="Images/landscape4.jpg"
-                alt="Landscape photograph"
-            >
-
-        </div>
-
-
-    </section>
-
-
-
-    <!-- =====================================
-         STILL LIFE
-    ====================================== -->
-
-    <section class="gallery-category">
-
-
-        <div class="category-header">
-
-            <p class="small-text">
-                COLLECTION III
-            </p>
-
-            <h2>
-                Still Life
-            </h2>
-
-            <p>
-                Small details, objects, textures, and
-                everyday things worth remembering.
-            </p>
-
-        </div>
-
-
-
-        <!-- CSS CAROUSEL -->
-
-        <div class="css-carousel stilllife-carousel">
-
-
-            <input
-                type="radio"
-                name="stilllife"
-                id="stilllife-1"
-                checked
-            >
-
-            <label
-                for="stilllife-1"
-                class="carousel-dot"
-            >
-                1
-            </label>
-
-
-            <input
-                type="radio"
-                name="stilllife"
-                id="stilllife-2"
-            >
-
-            <label
-                for="stilllife-2"
-                class="carousel-dot"
-            >
-                2
-            </label>
-
-
-            <input
-                type="radio"
-                name="stilllife"
-                id="stilllife-3"
-            >
-
-            <label
-                for="stilllife-3"
-                class="carousel-dot"
-            >
-                3
-            </label>
-
-
-            <input
-                type="radio"
-                name="stilllife"
-                id="stilllife-4"
-            >
-
-            <label
-                for="stilllife-4"
-                class="carousel-dot"
-            >
-                4
-            </label>
-
-
-
-            <div class="carousel-images">
-
-
-                <img
-                    src="Images/stilllife1.jpg"
-                    alt="Still life photograph"
-                    class="stilllife-photo stilllife-photo-1"
-                >
-
-                <img
-                    src="Images/stilllife2.jpg"
-                    alt="Still life photograph"
-                    class="stilllife-photo stilllife-photo-2"
-                >
-
-                <img
-                    src="Images/stilllife3.jpg"
-                    alt="Still life photograph"
-                    class="stilllife-photo stilllife-photo-3"
-                >
-
-                <img
-                    src="Images/stilllife4.jpg"
-                    alt="Still life photograph"
-                    class="stilllife-photo stilllife-photo-4"
-                >
+                <p>
+                    Places, skies, scenery, and quiet moments
+                    found out in the world.
+                </p>
 
             </div>
 
 
-        </div>
+            <!-- PHOTO DISPLAY -->
+
+            <div class="photo-display">
+
+                <div class="photo-card">
+                    <img
+                        src="Images/landscape1.jpg"
+                        alt="Landscape photograph"
+                    >
+                </div>
+
+                <div class="photo-card">
+                    <img
+                        src="Images/landscape2.jpg"
+                        alt="Landscape photograph"
+                    >
+                </div>
+
+                <div class="photo-card">
+                    <img
+                        src="Images/landscape3.jpg"
+                        alt="Landscape photograph"
+                    >
+                </div>
+
+                <div class="photo-card">
+                    <img
+                        src="Images/landscape4.jpg"
+                        alt="Landscape photograph"
+                    >
+                </div>
+
+            </div>
+
+
+            <a href="#landscape-grid" class="view-all-button">
+                View All Landscape Photos ♡
+            </a>
+
+
+            <!-- EXPANDED GALLERY -->
+
+            <div class="expanded-gallery" id="landscape-grid">
+
+                <div class="gallery-photo">
+                    <img
+                        src="Images/landscape1.jpg"
+                        alt="Landscape photograph"
+                    >
+                </div>
+
+                <div class="gallery-photo">
+                    <img
+                        src="Images/landscape2.jpg"
+                        alt="Landscape photograph"
+                    >
+                </div>
+
+                <div class="gallery-photo">
+                    <img
+                        src="Images/landscape3.jpg"
+                        alt="Landscape photograph"
+                    >
+                </div>
+
+                <div class="gallery-photo">
+                    <img
+                        src="Images/landscape4.jpg"
+                        alt="Landscape photograph"
+                    >
+                </div>
+
+            </div>
+
+        </section>
 
 
 
-        <a
-            href="#stilllife-grid"
-            class="view-all-button"
-        >
-            View All Still Life Photos ♡
-        </a>
+        <!-- ================================
+             STILL LIFE
+        ================================= -->
+
+        <section class="gallery-category">
+
+            <div class="category-header">
+
+                <span class="collection-number">
+                    COLLECTION III
+                </span>
+
+                <h2>Still Life</h2>
+
+                <p>
+                    Small details, objects, textures, and
+                    everyday things worth remembering.
+                </p>
+
+            </div>
+
+
+            <!-- PHOTO DISPLAY -->
+
+            <div class="photo-display">
+
+                <div class="photo-card">
+                    <img
+                        src="Images/stilllife1.jpg"
+                        alt="Still life photograph"
+                    >
+                </div>
+
+                <div class="photo-card">
+                    <img
+                        src="Images/stilllife2.jpg"
+                        alt="Still life photograph"
+                    >
+                </div>
+
+                <div class="photo-card">
+                    <img
+                        src="Images/stilllife3.jpg"
+                        alt="Still life photograph"
+                    >
+                </div>
+
+                <div class="photo-card">
+                    <img
+                        src="Images/stilllife4.jpg"
+                        alt="Still life photograph"
+                    >
+                </div>
+
+            </div>
+
+
+            <a href="#stilllife-grid" class="view-all-button">
+                View All Still Life Photos ♡
+            </a>
+
+
+            <!-- EXPANDED GALLERY -->
+
+            <div class="expanded-gallery" id="stilllife-grid">
+
+                <div class="gallery-photo">
+                    <img
+                        src="Images/stilllife1.jpg"
+                        alt="Still life photograph"
+                    >
+                </div>
+
+                <div class="gallery-photo">
+                    <img
+                        src="Images/stilllife2.jpg"
+                        alt="Still life photograph"
+                    >
+                </div>
+
+                <div class="gallery-photo">
+                    <img
+                        src="Images/stilllife3.jpg"
+                        alt="Still life photograph"
+                    >
+                </div>
+
+                <div class="gallery-photo">
+                    <img
+                        src="Images/stilllife4.jpg"
+                        alt="Still life photograph"
+                    >
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
 
 
 
-        <div
-            class="expanded-gallery"
-            id="stilllife-grid"
-        >
+    <!-- ================================
+         FOOTER
+    ================================= -->
 
-            <img
-                src="Images/stilllife1.jpg"
-                alt="Still life photograph"
-            >
+    <footer class="site-footer">
 
-            <img
-                src="Images/stilllife2.jpg"
-                alt="Still life photograph"
-            >
+        <p>♡ Made with love and a camera ♡</p>
 
-            <img
-                src="Images/stilllife3.jpg"
-                alt="Still life photograph"
-            >
+        <p>© 2026 Photography Portfolio</p>
 
-            <img
-                src="Images/stilllife4.jpg"
-                alt="Still life photograph"
-            >
+    </footer>
 
-        </div>
-
-
-    </section>
-
-
-</main>
-
-
-
-<!-- =====================================
-     FOOTER
-====================================== -->
-
-<footer class="site-footer">
-
-    <p>
-        Made with ♡
-    </p>
-
-    <p>
-        © 2026 Photography Portfolio
-    </p>
-
-</footer>
-```
 
 </body>
-
 </html>
+```
