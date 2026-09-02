@@ -799,13 +799,11 @@ h3 {
 ========================================= */
 
 .gallery-category {
-    position: relative;
-
     padding: 100px 0;
 
     border-top: 1px solid #eadbd7;
 
-    scroll-margin-top: 110px;
+    scroll-margin-top: 150px;
 }
 
 .gallery-category:first-of-type {
@@ -818,15 +816,15 @@ h3 {
 ========================================= */
 
 .category-header {
-    max-width: 700px;
+    max-width: 750px;
 
-    margin: 0 auto 50px;
+    margin: 0 auto 55px;
 
     text-align: center;
 }
 
 .category-header h2 {
-    font-size: clamp(42px, 5vw, 58px);
+    font-size: 50px;
 
     margin-bottom: 10px;
 
@@ -834,10 +832,6 @@ h3 {
 }
 
 .category-header p:not(.small-text) {
-    max-width: 550px;
-
-    margin: 0 auto;
-
     color: #756767;
 
     font-size: 16px;
@@ -845,7 +839,230 @@ h3 {
 
 
 /* =========================================
-   STICKY GALLERY NAVIGATION
+   SCRAPBOOK GALLERY
+========================================= */
+
+.scrapbook {
+    width: 100%;
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    gap: 45px 35px;
+
+    padding: 20px;
+}
+
+
+/* =========================================
+   SCRAPBOOK PHOTO
+========================================= */
+
+.scrapbook-photo {
+    position: relative;
+
+    width: 220px;
+
+    padding: 12px 12px 15px;
+
+    background: #fff;
+
+    box-shadow:
+        3px 5px 12px rgba(80, 55, 55, 0.12);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Different positions make it feel handmade */
+
+.scrapbook-photo.photo-one {
+    transform: rotate(-4deg);
+
+    margin-top: 15px;
+}
+
+.scrapbook-photo.photo-two {
+    transform: rotate(3deg);
+
+    margin-top: 55px;
+}
+
+.scrapbook-photo.photo-three {
+    transform: rotate(-2deg);
+
+    margin-top: 5px;
+}
+
+.scrapbook-photo.photo-four {
+    transform: rotate(5deg);
+
+    margin-top: 45px;
+}
+
+
+/* Hover */
+
+.scrapbook-photo:hover {
+    transform: rotate(0deg) translateY(-8px);
+
+    box-shadow:
+        6px 10px 20px rgba(80, 55, 55, 0.18);
+
+    z-index: 5;
+}
+
+
+/* =========================================
+   PHOTO FRAME
+========================================= */
+
+.photo-frame {
+    width: 100%;
+
+    background: #f4e7e4;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+/*
+    IMPORTANT:
+
+    The image keeps its natural aspect ratio.
+    Nothing gets cropped.
+*/
+
+.photo-frame img {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   PHOTO CAPTION
+========================================= */
+
+.photo-caption {
+    display: block;
+
+    padding-top: 10px;
+
+    text-align: center;
+
+    color: #756767;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 13px;
+
+    font-style: italic;
+}
+
+
+/* =========================================
+   SCRAPBOOK TAPE
+========================================= */
+
+.scrapbook-photo::before {
+    content: "";
+
+    position: absolute;
+
+    top: -9px;
+
+    left: 50%;
+
+    width: 60px;
+
+    height: 20px;
+
+    transform: translateX(-50%) rotate(-2deg);
+
+    background: rgba(224, 191, 190, 0.65);
+
+    z-index: 2;
+}
+
+
+/* Slightly different tape positions */
+
+.scrapbook-photo.photo-two::before {
+    transform:
+        translateX(-50%)
+        rotate(4deg);
+}
+
+.scrapbook-photo.photo-three::before {
+    transform:
+        translateX(-50%)
+        rotate(-4deg);
+}
+
+.scrapbook-photo.photo-four::before {
+    transform:
+        translateX(-50%)
+        rotate(3deg);
+}
+
+
+/* =========================================
+   GALLERY INTRO
+========================================= */
+
+.gallery-intro {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 50px;
+}
+
+.gallery-intro h1 {
+    font-size: clamp(45px, 6vw, 70px);
+
+    margin-bottom: 15px;
+
+    color: #493d3d;
+}
+
+.gallery-intro .intro-text {
+    max-width: 600px;
+
+    margin: auto;
+
+    color: #756767;
+
+    font-size: 17px;
+}
+
+
+/* =========================================
+   GALLERY NAVIGATION
 ========================================= */
 
 .gallery-navigation {
@@ -863,6 +1080,8 @@ h3 {
 
     gap: 10px;
 
+    flex-wrap: wrap;
+
     padding: 12px 20px;
 
     background: rgba(255, 249, 247, 0.96);
@@ -870,18 +1089,15 @@ h3 {
     border-bottom: 1px solid #eadbd7;
 
     backdrop-filter: blur(8px);
-
-    flex-wrap: wrap;
 }
 
-.gallery-nav-button {
-    display: inline-block;
 
-    padding: 8px 18px;
+.gallery-nav-button {
+    padding: 8px 17px;
 
     border: 1px solid #decaca;
 
-    border-radius: 25px;
+    border-radius: 20px;
 
     background: #fff9f7;
 
@@ -893,6 +1109,7 @@ h3 {
 
     transition: 0.3s ease;
 }
+
 
 .gallery-nav-button:hover {
     background: #b9828b;
@@ -906,356 +1123,22 @@ h3 {
 
 
 /* =========================================
-   SCRAPBOOK
-========================================= */
-
-.scrapbook {
-    max-width: 1000px;
-
-    margin: 0 auto;
-
-    min-height: 400px;
-
-    display: flex;
-
-    justify-content: center;
-
-    align-items: flex-start;
-
-    gap: 30px;
-
-    flex-wrap: wrap;
-
-    padding: 30px 20px 45px;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent 49%,
-            rgba(217, 185, 185, 0.08) 50%,
-            transparent 51%
-        );
-
-    border-radius: 10px;
-}
-
-
-/* =========================================
-   SCRAPBOOK PHOTO
-========================================= */
-
-.scrapbook-photo {
-    position: relative;
-
-    width: 190px;
-
-    padding: 10px 10px 18px;
-
-    background: #fff;
-
-    box-shadow: 3px 5px 12px rgba(73, 61, 61, 0.12);
-
-    transition: 0.35s ease;
-
-    flex-shrink: 0;
-}
-
-
-/* Slightly crooked photographs */
-
-.photo-one {
-    transform: rotate(-4deg);
-
-    margin-top: 20px;
-}
-
-.photo-two {
-    transform: rotate(3deg);
-
-    margin-top: 55px;
-}
-
-.photo-three {
-    transform: rotate(-2deg);
-
-    margin-top: 5px;
-}
-
-.photo-four {
-    transform: rotate(5deg);
-
-    margin-top: 45px;
-}
-
-
-/* Hover */
-
-.scrapbook-photo:hover {
-    z-index: 5;
-
-    transform: rotate(0deg) translateY(-8px) scale(1.04);
-
-    box-shadow:
-        8px 12px 20px rgba(73, 61, 61, 0.18);
-}
-
-
-/* =========================================
-   PHOTO FRAME
-========================================= */
-
-.photo-frame {
-    width: 100%;
-
-    aspect-ratio: 4 / 3;
-
-    overflow: hidden;
-
-    background: #eadbd7;
-}
-
-.photo-frame img {
-    width: 100%;
-
-    height: 100%;
-
-    display: block;
-
-    object-fit: cover;
-
-    transition: 0.4s ease;
-}
-
-.scrapbook-photo:hover .photo-frame img {
-    transform: scale(1.04);
-}
-
-
-/* =========================================
-   SCRAPBOOK CAPTIONS
-========================================= */
-
-.photo-caption {
-    display: block;
-
-    margin-top: 9px;
-
-    text-align: center;
-
-    color: #765e63;
-
-    font-family: Georgia, "Times New Roman", serif;
-
-    font-size: 12px;
-
-    font-style: italic;
-}
-
-
-/* =========================================
-   DECORATIVE TAPE
-========================================= */
-
-.scrapbook-photo::before {
-    content: "";
-
-    position: absolute;
-
-    top: -9px;
-
-    left: 50%;
-
-    width: 65px;
-
-    height: 18px;
-
-    transform: translateX(-50%) rotate(-2deg);
-
-    background: rgba(234, 214, 211, 0.85);
-
-    z-index: 2;
-}
-
-
-/* Give alternating photos different tape angles */
-
-.photo-two::before {
-    transform: translateX(-50%) rotate(4deg);
-}
-
-.photo-three::before {
-    transform: translateX(-50%) rotate(-4deg);
-}
-
-.photo-four::before {
-    transform: translateX(-50%) rotate(3deg);
-}
-
-
-/* =========================================
-   VIEW ALL BUTTON
-========================================= */
-
-.view-all-button {
-    display: block;
-
-    width: fit-content;
-
-    margin: 20px auto 0;
-
-    padding: 12px 24px;
-
-    border: 1px solid #decaca;
-
-    border-radius: 25px;
-
-    background: transparent;
-
-    color: #765e63;
-
-    font-family: Arial, sans-serif;
-
-    font-size: 12px;
-
-    transition: 0.3s ease;
-}
-
-.view-all-button:hover {
-    background: #b9828b;
-
-    border-color: #b9828b;
-
-    color: white;
-
-    transform: translateY(-3px);
-}
-
-
-/* =========================================
-   EXPANDED GALLERY
-========================================= */
-
-.expanded-gallery {
-    max-width: 900px;
-
-    margin: 45px auto 0;
-
-    padding-top: 40px;
-
-    border-top: 1px dashed #decaca;
-
-    display: grid;
-
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 18px;
-}
-
-.gallery-photo {
-    padding: 7px;
-
-    background: white;
-
-    box-shadow: 3px 4px 10px rgba(73, 61, 61, 0.1);
-
-    transition: 0.3s ease;
-}
-
-.gallery-photo:nth-child(even) {
-    transform: rotate(2deg);
-}
-
-.gallery-photo:nth-child(odd) {
-    transform: rotate(-2deg);
-}
-
-.gallery-photo:hover {
-    transform: rotate(0deg) translateY(-5px);
-
-    box-shadow: 7px 9px 15px rgba(73, 61, 61, 0.15);
-}
-
-.gallery-photo img {
-    width: 100%;
-
-    aspect-ratio: 1 / 1;
-
-    display: block;
-
-    object-fit: cover;
-}
-
-
-/* =========================================
-   GALLERY INTRO
-========================================= */
-
-.gallery-intro {
-    text-align: center;
-
-    max-width: 700px;
-
-    margin: 0 auto 30px;
-}
-
-.gallery-intro h1 {
-    font-size: clamp(45px, 6vw, 70px);
-
-    margin-bottom: 15px;
-}
-
-.gallery-intro .intro-text {
-    color: #756767;
-
-    max-width: 600px;
-
-    margin: auto;
-}
-
-
-/* =========================================
-   BACK TO TOP
-========================================= */
-
-.back-to-top {
-    display: block;
-
-    width: fit-content;
-
-    margin: 35px auto 0;
-
-    color: #b27680;
-
-    font-family: Arial, sans-serif;
-
-    font-size: 11px;
-
-    transition: 0.3s ease;
-}
-
-.back-to-top:hover {
-    color: #96636c;
-
-    transform: translateY(-2px);
-}
-
-
-/* =========================================
    GALLERY MOBILE
 ========================================= */
 
 @media (max-width: 750px) {
 
     .gallery-navigation {
-        top: 116px;
-
-        gap: 6px;
+        top: 105px;
 
         padding: 10px;
+
+        gap: 6px;
     }
 
+
     .gallery-nav-button {
-        padding: 7px 13px;
+        padding: 7px 12px;
 
         font-size: 11px;
     }
@@ -1264,119 +1147,100 @@ h3 {
     .gallery-category {
         padding: 70px 0;
 
-        scroll-margin-top: 160px;
+        scroll-margin-top: 145px;
     }
 
 
     .category-header {
-        padding: 0 15px;
+        margin-bottom: 40px;
 
-        margin-bottom: 30px;
+        padding: 0 10px;
     }
+
 
     .category-header h2 {
         font-size: 40px;
     }
 
 
-    /* Smaller scrapbook */
-
     .scrapbook {
-        gap: 18px;
+        gap: 35px 20px;
 
-        padding: 20px 5px 35px;
+        padding: 15px;
     }
+
 
     .scrapbook-photo {
-        width: 155px;
+        width: 190px;
     }
 
-    .photo-one {
+
+    .scrapbook-photo.photo-one {
         margin-top: 5px;
     }
 
-    .photo-two {
-        margin-top: 25px;
+
+    .scrapbook-photo.photo-two {
+        margin-top: 30px;
     }
 
-    .photo-three {
+
+    .scrapbook-photo.photo-three {
         margin-top: 0;
     }
 
-    .photo-four {
-        margin-top: 20px;
-    }
 
-
-    /* Expanded gallery */
-
-    .expanded-gallery {
-        grid-template-columns: repeat(2, 1fr);
-
-        gap: 12px;
-
-        margin-left: 10px;
-        margin-right: 10px;
+    .scrapbook-photo.photo-four {
+        margin-top: 25px;
     }
 
 }
 
 
 /* =========================================
-   VERY SMALL PHONES
+   SMALL PHONES
 ========================================= */
 
 @media (max-width: 450px) {
 
     .gallery-navigation {
-        top: 112px;
+        position: sticky;
 
-        overflow-x: auto;
-
-        flex-wrap: nowrap;
-
-        justify-content: flex-start;
-
-        padding-left: 12px;
-        padding-right: 12px;
+        top: 100px;
     }
+
 
     .gallery-nav-button {
-        flex-shrink: 0;
-    }
+        padding: 6px 10px;
 
-
-    .gallery-category {
-        scroll-margin-top: 165px;
+        font-size: 10px;
     }
 
 
     .scrapbook {
-        display: grid;
+        gap: 30px 15px;
 
-        grid-template-columns: 1fr 1fr;
-
-        gap: 15px;
-
-        padding: 20px 10px 30px;
+        padding: 10px;
     }
+
 
     .scrapbook-photo {
-        width: 100%;
+        width: calc(50% - 10px);
+
+        padding: 8px 8px 12px;
     }
 
-    .photo-one,
-    .photo-two,
-    .photo-three,
-    .photo-four {
+
+    .scrapbook-photo.photo-one,
+    .scrapbook-photo.photo-two,
+    .scrapbook-photo.photo-three,
+    .scrapbook-photo.photo-four {
         margin-top: 0;
     }
 
 
-    .expanded-gallery {
-        grid-template-columns: 1fr 1fr;
-
-        gap: 10px;
+    .photo-caption {
+        font-size: 11px;
     }
 
 }
