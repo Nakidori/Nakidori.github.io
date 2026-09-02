@@ -1,0 +1,563 @@
+```css
+/* =========================================
+   Main Website Styles
+========================================= */
+
+
+/* =========================================
+   GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fff9f7;
+    color: #493d3d;
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================
+   HEADER / NAVIGATION
+========================================= */
+
+.site-header {
+    width: 100%;
+    padding: 25px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(255, 249, 247, 0.95);
+    border-bottom: 1px solid #eadbd7;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #9b6870;
+}
+
+.navigation {
+    display: flex;
+    gap: 30px;
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.navigation a {
+    transition: 0.3s;
+}
+
+.navigation a:hover {
+    color: #c78391;
+}
+
+
+/* =========================================
+   GENERAL TEXT
+========================================= */
+
+.small-text {
+    color: #b27680;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: normal;
+}
+
+.section-heading {
+    text-align: center;
+}
+
+.section-heading h2,
+.about-text h2,
+.contact-section h2 {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.gallery-button,
+.contact-button {
+    display: inline-block;
+
+    padding: 13px 25px;
+
+    background: #b9828b;
+    color: white;
+
+    border-radius: 30px;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.gallery-button:hover,
+.contact-button:hover {
+    background: #96636c;
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   HOME / HERO
+========================================= */
+
+.hero {
+    min-height: 85vh;
+
+    padding: 80px 8%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 6vw, 80px);
+
+    line-height: 1.05;
+
+    color: #493d3d;
+
+    margin-bottom: 25px;
+}
+
+.intro {
+    max-width: 480px;
+
+    font-size: 18px;
+
+    color: #756767;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   HERO IMAGE
+========================================= */
+
+.hero-image {
+    position: relative;
+}
+
+.hero-image::before {
+    content: "♡";
+
+    position: absolute;
+
+    top: -30px;
+    right: -20px;
+
+    color: #c78391;
+
+    font-size: 40px;
+
+    z-index: 2;
+}
+
+.hero-image img {
+    width: 100%;
+
+    max-height: 650px;
+
+    object-fit: cover;
+
+    border-radius: 5px;
+
+    box-shadow: 20px 20px 0 #ead6d3;
+}
+
+
+/* =========================================
+   GALLERY PAGE
+========================================= */
+
+.gallery-page {
+    padding: 100px 7%;
+}
+
+.gallery-page-header {
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+.gallery-page-header h1 {
+    font-size: clamp(45px, 6vw, 70px);
+
+    margin-bottom: 15px;
+}
+
+.gallery-page-header p {
+    color: #756767;
+
+    max-width: 600px;
+
+    margin: auto;
+}
+
+
+/* =========================================
+   GALLERY FILTERS
+========================================= */
+
+.gallery-filters {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 45px;
+}
+
+.filter {
+    border: 1px solid #decaca;
+
+    background: transparent;
+
+    padding: 9px 18px;
+
+    border-radius: 20px;
+
+    color: #765e63;
+
+    cursor: pointer;
+
+    font-family: Arial, sans-serif;
+
+    transition: 0.3s;
+}
+
+.filter:hover,
+.filter.active {
+    background: #b9828b;
+
+    color: white;
+
+    border-color: #b9828b;
+}
+
+
+/* =========================================
+   PHOTO GALLERY
+========================================= */
+
+.photo-gallery {
+    columns: 3 280px;
+
+    column-gap: 20px;
+}
+
+.photo {
+    margin-bottom: 20px;
+
+    break-inside: avoid;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 5px;
+
+    background: #eadbd7;
+}
+
+.photo img {
+    width: 100%;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+.photo:hover img {
+    transform: scale(1.04);
+}
+
+
+/* Little heart when hovering */
+
+.photo::after {
+    content: "♡";
+
+    position: absolute;
+
+    bottom: 12px;
+    right: 15px;
+
+    color: white;
+
+    font-size: 22px;
+
+    opacity: 0;
+
+    transition: 0.3s;
+}
+
+.photo:hover::after {
+    opacity: 1;
+}
+
+
+/* =========================================
+   ABOUT SECTION
+========================================= */
+
+.about-section {
+    padding: 120px 10%;
+
+    display: grid;
+
+    grid-template-columns: 0.8fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+.about-image img {
+    width: 100%;
+
+    max-height: 550px;
+
+    object-fit: cover;
+
+    border-radius: 5px;
+}
+
+.about-text h2 {
+    color: #493d3d;
+
+    margin-bottom: 25px;
+}
+
+.about-text p:not(.small-text) {
+    color: #756767;
+
+    margin-bottom: 20px;
+
+    font-size: 17px;
+}
+
+
+/* =========================================
+   CONTACT SECTION
+========================================= */
+
+.contact-section {
+    padding: 120px 20px;
+
+    text-align: center;
+
+    background: #f4e7e4;
+}
+
+.contact-section h2 {
+    margin-bottom: 15px;
+}
+
+.contact-section > p:not(.small-text) {
+    color: #756767;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+    padding: 30px 7%;
+
+    background: #493d3d;
+
+    color: #f9eeee;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    display: flex;
+
+    justify-content: space-between;
+}
+
+
+/* =========================================
+   PAGE DECORATIONS
+========================================= */
+
+.decorative-heart {
+    color: #c78391;
+
+    font-size: 25px;
+}
+
+.divider {
+    width: 60px;
+
+    height: 1px;
+
+    background: #d9b9b9;
+
+    margin: 20px auto;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 750px) {
+
+    /* Header */
+
+    .site-header {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 20px 5%;
+    }
+
+    .navigation {
+        gap: 15px;
+
+        font-size: 12px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        padding: 60px 8%;
+
+        gap: 50px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .hero-image img {
+        box-shadow: 10px 10px 0 #ead6d3;
+    }
+
+
+    /* Gallery */
+
+    .gallery-page {
+        padding: 70px 5%;
+    }
+
+    .photo-gallery {
+        columns: 2 180px;
+
+        column-gap: 12px;
+    }
+
+    .photo {
+        margin-bottom: 12px;
+    }
+
+
+    /* About */
+
+    .about-section {
+        grid-template-columns: 1fr;
+
+        padding: 80px 8%;
+
+        gap: 40px;
+    }
+
+
+    /* Headings */
+
+    .section-heading h2,
+    .about-text h2,
+    .contact-section h2 {
+        font-size: 36px;
+    }
+
+
+    /* Footer */
+
+    .site-footer {
+        flex-direction: column;
+
+        gap: 8px;
+
+        text-align: center;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 450px) {
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .photo-gallery {
+        columns: 1;
+    }
+
+    .navigation {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+}
+```
