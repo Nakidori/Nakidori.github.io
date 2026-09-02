@@ -562,4 +562,235 @@ h3 {
         justify-content: center;
     }
 }
-```
+
+/* =========================================
+   SOCIAL MEDIA SECTION
+========================================= */
+
+.social-intro {
+    max-width: 550px;
+    margin: 0 auto;
+    color: #756767;
+    font-size: 16px;
+}
+
+
+/* Decorative Divider */
+
+.contact-section .divider {
+    position: relative;
+
+    color: #b9828b;
+
+    background: none;
+
+    width: 100%;
+    height: auto;
+
+    margin: 30px auto;
+}
+
+.contact-section .divider::before {
+    content: "────────  ♡  ────────";
+
+    color: #d9b9b9;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
+}
+
+
+/* Social Cards Container */
+
+.social-cards {
+    max-width: 700px;
+
+    margin: 40px auto 0;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    text-align: left;
+}
+
+
+/* Individual Card */
+
+.social-card {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 20px;
+
+    background: #fff9f7;
+
+    border: 1px solid #decaca;
+
+    border-radius: 8px;
+
+    transition: 0.3s ease;
+
+    overflow: hidden;
+}
+
+
+/* Decorative corner */
+
+.social-card::before {
+    content: "♡";
+
+    position: absolute;
+
+    top: -8px;
+    right: 10px;
+
+    color: #ead6d3;
+
+    font-size: 35px;
+
+    transition: 0.3s;
+}
+
+
+/* Icon */
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f4e7e4;
+
+    color: #b9828b;
+
+    font-size: 20px;
+
+    transition: 0.3s;
+}
+
+
+/* Text */
+
+.social-card-text {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+    min-width: 0;
+}
+
+.social-name {
+    color: #493d3d;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 18px;
+}
+
+.social-description {
+    color: #8a7777;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    line-height: 1.4;
+}
+
+
+/* Arrow */
+
+.social-arrow {
+    margin-left: auto;
+
+    color: #b9828b;
+
+    font-size: 20px;
+
+    transition: 0.3s;
+}
+
+
+/* Hover */
+
+.social-card:hover {
+    transform: translateY(-5px);
+
+    background: #fff;
+
+    border-color: #c78391;
+
+    box-shadow: 8px 8px 0 #ead6d3;
+}
+
+.social-card:hover .social-icon {
+    background: #b9828b;
+
+    color: white;
+
+    transform: rotate(-8deg);
+}
+
+.social-card:hover .social-arrow {
+    transform: translateX(5px);
+}
+
+.social-card:hover::before {
+    color: #decaca;
+
+    transform: rotate(10deg);
+}
+
+
+/* Bottom Text */
+
+.social-footer-text {
+    margin-top: 40px;
+
+    color: #b27680;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-style: italic;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   SOCIAL MEDIA MOBILE
+========================================= */
+
+@media (max-width: 750px) {
+
+    .social-cards {
+        grid-template-columns: 1fr;
+
+        max-width: 500px;
+
+        gap: 12px;
+    }
+
+    .social-card {
+        padding: 18px;
+    }
+
+}
