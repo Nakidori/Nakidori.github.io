@@ -1243,3 +1243,21 @@ h3 {
     }
 
 }
+
+/* =========================================
+   CLICKABLE PHOTOS
+========================================= */
+
+.photo-link {
+    display: block;
+
+    cursor: zoom-in;
+}
+
+.photo-link img {
+    transition: opacity 0.3s ease;
+}
+
+.photo-link:hover img {
+    opacity: 0.85;
+}
