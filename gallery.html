@@ -540,11 +540,152 @@
 
     </footer>
 
+</body>
+
+    
+</html>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <span>Made with ♡ by Naki</span>
+        <span>© nakidori._.cosplays</span>
+    </footer>
 
 
-    <!-- Gallery JavaScript -->
+    <!-- GALLERY JAVASCRIPT -->
+    <script>
 
-    <script src="gallery.js"></script>
+        const gallerySlides = {
+            portrait: 0,
+            landscape: 0,
+            stilllife: 0
+        };
+
+        function changeSlide(galleryName, direction) {
+
+            const gallery = document.querySelector(
+                `[data-gallery="${galleryName}"]`
+            );
+
+            const slides = gallery.querySelectorAll(".gallery-slide");
+
+            gallerySlides[galleryName] += direction;
+
+            if (gallerySlides[galleryName] < 0) {
+                gallerySlides[galleryName] = slides.length - 1;
+            }
+
+            if (gallerySlides[galleryName] >= slides.length) {
+                gallerySlides[galleryName] = 0;
+            }
+
+            slides.forEach((slide, index) => {
+                slide.classList.toggle(
+                    "active",
+                    index === gallerySlides[galleryName]
+                );
+            });
+
+            updateDots(galleryName);
+        }
+
+
+        function updateDots(galleryName) {
+
+            const gallery = document.querySelector(
+                `[data-gallery="${galleryName}"]`
+            );
+
+            const dots = gallery.querySelectorAll(".gallery-dot");
+
+            dots.forEach((dot, index) => {
+                dot.classList.toggle(
+                    "active",
+                    index === gallerySlides[galleryName]
+                );
+            });
+        }
+
+
+        function goToSlide(galleryName, slideNumber) {
+
+            gallerySlides[galleryName] = slideNumber;
+
+            const gallery = document.querySelector(
+                `[data-gallery="${galleryName}"]`
+            );
+
+            const slides = gallery.querySelectorAll(".gallery-slide");
+
+            slides.forEach((slide, index) => {
+                slide.classList.toggle(
+                    "active",
+                    index === slideNumber
+                );
+            });
+
+            updateDots(galleryName);
+        }
+
+
+        function toggleGallery(galleryName) {
+
+            const gallery = document.querySelector(
+                `[data-gallery="${galleryName}"]`
+            );
+
+            const expanded = gallery.querySelector(".expanded-gallery");
+            const button = gallery.querySelector(".view-all-button");
+
+            expanded.classList.toggle("show");
+
+            if (expanded.classList.contains("show")) {
+                button.textContent = "Hide Photos";
+            } else {
+                button.textContent = "View All Photos";
+            }
+        }
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const galleries = document.querySelectorAll("[data-gallery]");
+
+            galleries.forEach(gallery => {
+
+                const slides = gallery.querySelectorAll(".gallery-slide");
+                const dotsContainer = gallery.querySelector(".gallery-dots");
+
+                slides.forEach((slide, index) => {
+
+                    if (index === 0) {
+                        slide.classList.add("active");
+                    }
+
+                    const dot = document.createElement("button");
+
+                    dot.classList.add("gallery-dot");
+
+                    if (index === 0) {
+                        dot.classList.add("active");
+                    }
+
+                    dot.addEventListener("click", function () {
+                        goToSlide(
+                            gallery.dataset.gallery,
+                            index
+                        );
+                    });
+
+                    dotsContainer.appendChild(dot);
+
+                });
+
+            });
+
+        });
+
+    </script>
 
 </body>
 </html>
