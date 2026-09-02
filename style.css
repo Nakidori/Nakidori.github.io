@@ -366,6 +366,9 @@ h3 {
     object-fit: cover;
 
     border-radius: 5px;
+
+   object-position: top center;
+   
 }
 
 .about-text h2 {
