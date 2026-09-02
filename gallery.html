@@ -1,81 +1,121 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Gallery ♡ Photography</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 
 <body>
 
-    <!-- ================================
-         HEADER
-    ================================= -->
+
+    <!-- =====================================
+         HEADER / NAVIGATION
+    ====================================== -->
 
     <header class="site-header">
 
         <div class="logo">
-            <a href="index.html">PHOTOGRAPHY ♡</a>
+            <a href="index.html">
+                PHOTOGRAPHY ♡
+            </a>
         </div>
 
+
         <nav class="navigation">
-            <a href="index.html">Home</a>
-            <a href="gallery.html" class="active">Gallery</a>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="gallery.html" class="active">
+                Gallery
+            </a>
+
         </nav>
 
     </header>
 
 
 
-    <!-- ================================
-         GALLERY
-    ================================= -->
+    <!-- =====================================
+         GALLERY PAGE
+    ====================================== -->
 
     <main class="gallery-page">
 
 
-        <!-- PAGE INTRO -->
+        <!-- =====================================
+             INTRO
+        ====================================== -->
 
         <section class="gallery-intro">
 
-            <p class="small-text">♡ MY PHOTOGRAPHY ♡</p>
+            <p class="small-text">
+                ♡ MY PHOTOGRAPHY ♡
+            </p>
 
-            <h1>My Gallery</h1>
+            <h1>
+                The Gallery
+            </h1>
 
             <div class="divider">
                 ✦
             </div>
 
             <p class="intro-text">
-                A little collection of photographs I've taken —
-                <br>
-                moments, places, creatures, and tiny details
-                that caught my eye.
+                A collection of little moments, places,
+                creatures, and details that caught my eye.
             </p>
+
+
+            <!-- SECTION NAVIGATION -->
+
+            <nav class="gallery-navigation">
+
+                <a href="#portrait" class="gallery-nav-button">
+                    ♡ Portrait
+                </a>
+
+                <a href="#landscape" class="gallery-nav-button">
+                    ♡ Landscape
+                </a>
+
+                <a href="#still-life" class="gallery-nav-button">
+                    ♡ Still Life
+                </a>
+
+            </nav>
 
         </section>
 
 
 
-        <!-- ================================
+        <!-- =====================================
              PORTRAIT
-        ================================= -->
+        ====================================== -->
 
-        <section class="gallery-category">
+        <section
+            class="gallery-category"
+            id="portrait"
+        >
 
             <div class="category-header">
 
-                <span class="collection-number">
+                <p class="small-text">
                     COLLECTION I
-                </span>
+                </p>
 
-                <h2>Portrait</h2>
+                <h2>
+                    Portrait
+                </h2>
 
                 <p>
                     Animals, personalities, and little
@@ -85,97 +125,133 @@
             </div>
 
 
-            <!-- PHOTO DISPLAY -->
+            <!-- PHOTO PREVIEW -->
 
             <div class="photo-display">
 
-                <div class="photo-card">
-                    <img
-                        src="Images/portrait1.jpg"
-                        alt="Animal portrait"
-                    >
-                </div>
 
                 <div class="photo-card">
+
                     <img
-                        src="Images/portrait2.jpg"
-                        alt="Animal portrait"
+                        src="Images/Flamingo.png"
+                        alt="Flamingo photograph"
                     >
+
                 </div>
 
-                <div class="photo-card">
-                    <img
-                        src="Images/portrait3.jpg"
-                        alt="Animal portrait"
-                    >
-                </div>
 
                 <div class="photo-card">
+
                     <img
-                        src="Images/portrait4.jpg"
-                        alt="Animal portrait"
+                        src="Images/MeiThumbnail.png"
+                        alt="Photography placeholder"
                     >
+
                 </div>
+
+
+                <div class="photo-card">
+
+                    <img
+                        src="Images/Flamingo.png"
+                        alt="Flamingo photograph"
+                    >
+
+                </div>
+
+
+                <div class="photo-card">
+
+                    <img
+                        src="Images/MeiThumbnail.png"
+                        alt="Photography placeholder"
+                    >
+
+                </div>
+
 
             </div>
 
 
-            <a href="#portrait-grid" class="view-all-button">
+            <!-- VIEW ALL -->
+
+            <a
+                href="#portrait-gallery"
+                class="view-all-button"
+            >
                 View All Portrait Photos ♡
             </a>
 
 
             <!-- EXPANDED GALLERY -->
 
-            <div class="expanded-gallery" id="portrait-grid">
+            <div
+                class="expanded-gallery"
+                id="portrait-gallery"
+            >
 
                 <div class="gallery-photo">
                     <img
-                        src="Images/portrait1.jpg"
-                        alt="Animal portrait"
+                        src="Images/Flamingo.png"
+                        alt="Flamingo photograph"
                     >
                 </div>
 
                 <div class="gallery-photo">
                     <img
-                        src="Images/portrait2.jpg"
-                        alt="Animal portrait"
+                        src="Images/MeiThumbnail.png"
+                        alt="Photography placeholder"
                     >
                 </div>
 
                 <div class="gallery-photo">
                     <img
-                        src="Images/portrait3.jpg"
-                        alt="Animal portrait"
+                        src="Images/Flamingo.png"
+                        alt="Flamingo photograph"
                     >
                 </div>
 
                 <div class="gallery-photo">
                     <img
-                        src="Images/portrait4.jpg"
-                        alt="Animal portrait"
+                        src="Images/MeiThumbnail.png"
+                        alt="Photography placeholder"
                     >
                 </div>
 
             </div>
 
+
+            <!-- BACK TO TOP -->
+
+            <a
+                href="#top"
+                class="back-to-top"
+            >
+                ↑ Back to collections
+            </a>
+
         </section>
 
 
 
-        <!-- ================================
+        <!-- =====================================
              LANDSCAPE
-        ================================= -->
+        ====================================== -->
 
-        <section class="gallery-category">
+        <section
+            class="gallery-category"
+            id="landscape"
+        >
 
             <div class="category-header">
 
-                <span class="collection-number">
+                <p class="small-text">
                     COLLECTION II
-                </span>
+                </p>
 
-                <h2>Landscape</h2>
+                <h2>
+                    Landscape
+                </h2>
 
                 <p>
                     Places, skies, scenery, and quiet moments
@@ -185,97 +261,133 @@
             </div>
 
 
-            <!-- PHOTO DISPLAY -->
+            <!-- PHOTO PREVIEW -->
 
             <div class="photo-display">
 
-                <div class="photo-card">
-                    <img
-                        src="Images/landscape1.jpg"
-                        alt="Landscape photograph"
-                    >
-                </div>
 
                 <div class="photo-card">
+
                     <img
-                        src="Images/landscape2.jpg"
-                        alt="Landscape photograph"
+                        src="Images/Flamingo.png"
+                        alt="Photography placeholder"
                     >
+
                 </div>
 
-                <div class="photo-card">
-                    <img
-                        src="Images/landscape3.jpg"
-                        alt="Landscape photograph"
-                    >
-                </div>
 
                 <div class="photo-card">
+
                     <img
-                        src="Images/landscape4.jpg"
-                        alt="Landscape photograph"
+                        src="Images/MeiThumbnail.png"
+                        alt="Photography placeholder"
                     >
+
                 </div>
+
+
+                <div class="photo-card">
+
+                    <img
+                        src="Images/Flamingo.png"
+                        alt="Photography placeholder"
+                    >
+
+                </div>
+
+
+                <div class="photo-card">
+
+                    <img
+                        src="Images/MeiThumbnail.png"
+                        alt="Photography placeholder"
+                    >
+
+                </div>
+
 
             </div>
 
 
-            <a href="#landscape-grid" class="view-all-button">
+            <!-- VIEW ALL -->
+
+            <a
+                href="#landscape-gallery"
+                class="view-all-button"
+            >
                 View All Landscape Photos ♡
             </a>
 
 
             <!-- EXPANDED GALLERY -->
 
-            <div class="expanded-gallery" id="landscape-grid">
+            <div
+                class="expanded-gallery"
+                id="landscape-gallery"
+            >
 
                 <div class="gallery-photo">
                     <img
-                        src="Images/landscape1.jpg"
-                        alt="Landscape photograph"
+                        src="Images/Flamingo.png"
+                        alt="Photography placeholder"
                     >
                 </div>
 
                 <div class="gallery-photo">
                     <img
-                        src="Images/landscape2.jpg"
-                        alt="Landscape photograph"
+                        src="Images/MeiThumbnail.png"
+                        alt="Photography placeholder"
                     >
                 </div>
 
                 <div class="gallery-photo">
                     <img
-                        src="Images/landscape3.jpg"
-                        alt="Landscape photograph"
+                        src="Images/Flamingo.png"
+                        alt="Photography placeholder"
                     >
                 </div>
 
                 <div class="gallery-photo">
                     <img
-                        src="Images/landscape4.jpg"
-                        alt="Landscape photograph"
+                        src="Images/MeiThumbnail.png"
+                        alt="Photography placeholder"
                     >
                 </div>
 
             </div>
 
+
+            <!-- BACK TO COLLECTIONS -->
+
+            <a
+                href="#top"
+                class="back-to-top"
+            >
+                ↑ Back to collections
+            </a>
+
         </section>
 
 
 
-        <!-- ================================
+        <!-- =====================================
              STILL LIFE
-        ================================= -->
+        ====================================== -->
 
-        <section class="gallery-category">
+        <section
+            class="gallery-category"
+            id="still-life"
+        >
 
             <div class="category-header">
 
-                <span class="collection-number">
+                <p class="small-text">
                     COLLECTION III
-                </span>
+                </p>
 
-                <h2>Still Life</h2>
+                <h2>
+                    Still Life
+                </h2>
 
                 <p>
                     Small details, objects, textures, and
@@ -285,79 +397,110 @@
             </div>
 
 
-            <!-- PHOTO DISPLAY -->
+            <!-- PHOTO PREVIEW -->
 
             <div class="photo-display">
 
-                <div class="photo-card">
-                    <img
-                        src="Images/stilllife1.jpg"
-                        alt="Still life photograph"
-                    >
-                </div>
 
                 <div class="photo-card">
+
                     <img
-                        src="Images/stilllife2.jpg"
-                        alt="Still life photograph"
+                        src="Images/Flamingo.png"
+                        alt="Photography placeholder"
                     >
+
                 </div>
 
-                <div class="photo-card">
-                    <img
-                        src="Images/stilllife3.jpg"
-                        alt="Still life photograph"
-                    >
-                </div>
 
                 <div class="photo-card">
+
                     <img
-                        src="Images/stilllife4.jpg"
-                        alt="Still life photograph"
+                        src="Images/MeiThumbnail.png"
+                        alt="Photography placeholder"
                     >
+
                 </div>
+
+
+                <div class="photo-card">
+
+                    <img
+                        src="Images/Flamingo.png"
+                        alt="Photography placeholder"
+                    >
+
+                </div>
+
+
+                <div class="photo-card">
+
+                    <img
+                        src="Images/MeiThumbnail.png"
+                        alt="Photography placeholder"
+                    >
+
+                </div>
+
 
             </div>
 
 
-            <a href="#stilllife-grid" class="view-all-button">
+            <!-- VIEW ALL -->
+
+            <a
+                href="#still-life-gallery"
+                class="view-all-button"
+            >
                 View All Still Life Photos ♡
             </a>
 
 
             <!-- EXPANDED GALLERY -->
 
-            <div class="expanded-gallery" id="stilllife-grid">
+            <div
+                class="expanded-gallery"
+                id="still-life-gallery"
+            >
 
                 <div class="gallery-photo">
                     <img
-                        src="Images/stilllife1.jpg"
-                        alt="Still life photograph"
+                        src="Images/Flamingo.png"
+                        alt="Photography placeholder"
                     >
                 </div>
 
                 <div class="gallery-photo">
                     <img
-                        src="Images/stilllife2.jpg"
-                        alt="Still life photograph"
+                        src="Images/MeiThumbnail.png"
+                        alt="Photography placeholder"
                     >
                 </div>
 
                 <div class="gallery-photo">
                     <img
-                        src="Images/stilllife3.jpg"
-                        alt="Still life photograph"
+                        src="Images/Flamingo.png"
+                        alt="Photography placeholder"
                     >
                 </div>
 
                 <div class="gallery-photo">
                     <img
-                        src="Images/stilllife4.jpg"
-                        alt="Still life photograph"
+                        src="Images/MeiThumbnail.png"
+                        alt="Photography placeholder"
                     >
                 </div>
 
             </div>
+
+
+            <!-- BACK TO COLLECTIONS -->
+
+            <a
+                href="#top"
+                class="back-to-top"
+            >
+                ↑ Back to collections
+            </a>
 
         </section>
 
@@ -366,19 +509,23 @@
 
 
 
-    <!-- ================================
+    <!-- =====================================
          FOOTER
-    ================================= -->
+    ====================================== -->
 
     <footer class="site-footer">
 
-        <p>♡ Made with love and a camera ♡</p>
+        <p>
+            ♡ Made with love and a camera ♡
+        </p>
 
-        <p>© 2026 Photography Portfolio</p>
+        <p>
+            © 2026 Photography Portfolio
+        </p>
 
     </footer>
 
 
 </body>
+
 </html>
-```
