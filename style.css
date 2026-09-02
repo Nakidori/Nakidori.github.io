@@ -1245,19 +1245,210 @@ h3 {
 }
 
 /* =========================================
-   CLICKABLE PHOTOS
+   CLICKABLE PHOTO LIGHTBOX
 ========================================= */
 
-.photo-link {
+.photo-lightbox {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 40px;
+
+    background: rgba(73, 61, 61, 0.88);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+}
+
+
+/* Show the lightbox when its URL hash is active */
+
+.photo-lightbox:target {
+    opacity: 1;
+
+    visibility: visible;
+
+    pointer-events: auto;
+}
+
+
+/* =========================================
+   DARK BACKGROUND
+========================================= */
+
+.lightbox-background {
+    position: absolute;
+
+    inset: 0;
+
+    cursor: zoom-out;
+}
+
+
+/* =========================================
+   LARGE PHOTO
+========================================= */
+
+.lightbox-content {
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 90vw;
+
+    max-height: 90vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.lightbox-content img {
     display: block;
 
+    max-width: 90vw;
+
+    max-height: 88vh;
+
+    width: auto;
+
+    height: auto;
+
+    object-fit: contain;
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.35);
+
+    border: 8px solid white;
+}
+
+
+/* =========================================
+   CLOSE BUTTON
+========================================= */
+
+.lightbox-close {
+    position: absolute;
+
+    top: -20px;
+
+    right: -20px;
+
+    width: 40px;
+
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #fff9f7;
+
+    color: #765e63;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 28px;
+
+    line-height: 1;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.2);
+
+    transition: 0.3s ease;
+}
+
+
+.lightbox-close:hover {
+    background: #b9828b;
+
+    color: white;
+
+    transform: rotate(90deg);
+}
+
+
+/* =========================================
+   CLICKABLE SCRAPBOOK PHOTOS
+========================================= */
+
+.scrapbook-photo {
     cursor: zoom-in;
 }
 
-.photo-link img {
-    transition: opacity 0.3s ease;
+
+.scrapbook-photo img {
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
 }
 
-.photo-link:hover img {
-    opacity: 0.85;
+
+.scrapbook-photo:hover img {
+    opacity: 0.88;
+}
+
+
+/* =========================================
+   LIGHTBOX MOBILE
+========================================= */
+
+@media (max-width: 750px) {
+
+    .photo-lightbox {
+        padding: 20px;
+    }
+
+
+    .lightbox-content {
+        max-width: 95vw;
+
+        max-height: 90vh;
+    }
+
+
+    .lightbox-content img {
+        max-width: 92vw;
+
+        max-height: 85vh;
+
+        border-width: 5px;
+    }
+
+
+    .lightbox-close {
+        top: -15px;
+
+        right: -15px;
+
+        width: 35px;
+
+        height: 35px;
+
+        font-size: 24px;
+    }
+
 }
